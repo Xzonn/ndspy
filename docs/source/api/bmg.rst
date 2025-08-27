@@ -123,7 +123,7 @@ API
         efficiency, and the amount and choice of characters that can be
         encoded.
 
-        Valid encodings are ``cp1252``, ``utf-16``, ``shift-jis``, and
+        Valid encodings are ``cp1252``, ``utf-16``, ``cp932``, and
         ``utf-8``.
 
         .. seealso::

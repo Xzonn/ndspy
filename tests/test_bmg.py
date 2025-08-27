@@ -95,7 +95,7 @@ def test_encoding():
     ENCODINGS = {
         'cp1252': 1,
         'utf-16': 2,
-        'shift-jis': 3,
+        'cp932': 3,
         'utf-8': 4,
     }
 
@@ -164,8 +164,8 @@ def test_encoding():
     testLoad('utf-16', messages, data, '>')
     testSave('utf-16', messages, data, '>')
     data = (FILES_PATH / '01-19_1B-7F_shift-jis.bmg').read_bytes()
-    testLoad('shift-jis', messages, data)
-    testSave('shift-jis', messages, data)
+    testLoad('cp932', messages, data)
+    testSave('cp932', messages, data)
     data = (FILES_PATH / '01-19_1B-7F_utf-8.bmg').read_bytes()
     testLoad('utf-8', messages, data)
     testSave('utf-8', messages, data)
@@ -180,7 +180,7 @@ def test_encoding():
     data = (FILES_PATH / '80-FF_utf-16be.bmg').read_bytes()
     testLoad('utf-16', messages, data, '>')
     testSave('utf-16', messages, data, '>')
-    testUnsaveable('shift-jis', messages)
+    testUnsaveable('cp932', messages)
     data = (FILES_PATH / '80-FF_utf-8.bmg').read_bytes()
     testLoad('utf-8', messages, data)
     testSave('utf-8', messages, data)
@@ -191,10 +191,10 @@ def test_encoding():
     data = (FILES_PATH / 'A1-DF_cp1252.bmg').read_bytes()
     testLoad('cp1252', messages, data)
     testSave('cp1252', messages, data)
-    messages = [bytes(range(0xA1, 0xDF)).decode('shift-jis')]
+    messages = [bytes(range(0xA1, 0xDF)).decode('cp932')]
     data = (FILES_PATH / 'A1-DF_shift-jis.bmg').read_bytes()
-    testLoad('shift-jis', messages, data)
-    testSave('shift-jis', messages, data)
+    testLoad('cp932', messages, data)
+    testSave('cp932', messages, data)
 
 
 def test_fullEncoding():
@@ -206,13 +206,13 @@ def test_fullEncoding():
     bmg.endianness = '<'
     bmg.encoding = 'cp1252'; assert bmg.fullEncoding == 'cp1252'
     bmg.encoding = 'utf-16'; assert bmg.fullEncoding == 'utf-16le'
-    bmg.encoding = 'shift-jis'; assert bmg.fullEncoding == 'shift-jis'
+    bmg.encoding = 'cp932'; assert bmg.fullEncoding == 'cp932'
     bmg.encoding = 'utf-8'; assert bmg.fullEncoding == 'utf-8'
 
     bmg.endianness = '>'
     bmg.encoding = 'cp1252'; assert bmg.fullEncoding == 'cp1252'
     bmg.encoding = 'utf-16'; assert bmg.fullEncoding == 'utf-16be'
-    bmg.encoding = 'shift-jis'; assert bmg.fullEncoding == 'shift-jis'
+    bmg.encoding = 'cp932'; assert bmg.fullEncoding == 'cp932'
     bmg.encoding = 'utf-8'; assert bmg.fullEncoding == 'utf-8'
 
 
@@ -225,7 +225,7 @@ def test_badCharDetection():
     for bad in '\x00\x1A':
         bmg.messages = [ndspy.bmg.Message(b'', f'hello {bad} world')]
 
-        for encoding in ['cp1252', 'utf-16', 'shift-jis', 'utf-8']:
+        for encoding in ['cp1252', 'utf-16', 'cp932', 'utf-8']:
             bmg.encoding = encoding
 
             with pytest.raises(ValueError):

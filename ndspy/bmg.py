@@ -32,7 +32,7 @@ from . import _common
 
 # (Please keep this in sync with the type annotation for the
 # `BMG.encoding` attribute:)
-_ENCODINGS = [None, 'cp1252', 'utf-16', 'shift-jis', 'utf-8']
+_ENCODINGS = [None, 'cp1252', 'utf-16', 'cp932', 'utf-8']
 # CP1252 is found in Animal Crossing Wild World and Super Princess Peach
 # UTF-16 is found in the Zeldas and NSMB
 # SJIS is found in Super Princess Peach
@@ -50,7 +50,7 @@ class BMG:
 
     id: int
     # (Please keep this in sync with the `_ENCODINGS` global:)
-    encoding: Literal['cp1252', 'utf-16', 'shift-jis', 'utf-8']
+    encoding: Literal['cp1252', 'utf-16', 'cp932', 'utf-8']
     endianness: Literal['<', '>']
     unk14: int
     unk18: int
