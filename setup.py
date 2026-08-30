@@ -5,13 +5,13 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setuptools.setup(
     name='ndspy',
-    version='4.2.0',
-    author='RoadrunnerWMC',
-    author_email='roadrunnerwmc@gmail.com',
+    version='4.3.0',
+    author='RoadrunnerWMC, Xzonn',
+    author_email='roadrunnerwmc@gmail.com, Xzonn@outlook.com',
     description='Python library that can help you read, modify and create many types of files used in Nintendo DS games.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/RoadrunnerWMC/ndspy',
+    url='https://github.com/Xzonn/ndspy',
     packages=setuptools.find_packages(),
     package_data={
         'ndspy': ['py.typed'],
