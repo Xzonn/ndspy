@@ -32,6 +32,7 @@ This section contains the documentation for ndspy's Python API.
     codeCompression
     fnt
     lz10
+    lz11
     narc
     rom
     soundArchive

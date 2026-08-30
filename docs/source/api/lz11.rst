@@ -1,0 +1,57 @@
+..
+    Copyright 2026 Xzonn
+
+    This file is part of ndspy.
+
+    ndspy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ndspy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ndspy.  If not, see <https://www.gnu.org/licenses/>.
+
+``ndspy.lz11``: LZ11 Compression
+================================
+
+.. py:module:: ndspy.lz11
+
+``ndspy.lz11`` provides functions for compression and decompression in the
+LZ11 format used in Nintendo DS and Nintendo 3DS software.
+
+.. py:function:: compress(data)
+
+    Compress a :class:`bytes` object using LZ11 and return the compressed
+    :class:`bytes` object.
+
+.. py:function:: decompress(data)
+
+    Decompress an LZ11-compressed :class:`bytes` object and return the
+    decompressed :class:`bytes` object.
+
+.. py:function:: compressFromFile(filePath)
+
+    Read a file, compress its contents using LZ11, and return the compressed
+    :class:`bytes` object.
+
+.. py:function:: compressToFile(data, filePath)
+
+    Compress a :class:`bytes` object using LZ11 and write it to a file.
+
+.. py:function:: decompressFromFile(filePath)
+
+    Read an LZ11-compressed file and return the decompressed :class:`bytes`
+    object.
+
+.. py:function:: decompressToFile(data, filePath)
+
+    Decompress an LZ11-compressed :class:`bytes` object and write it to a file.
+
+.. py:function:: main(args=None)
+
+    Run the :doc:`command-line interface <../cli/lz11>`.

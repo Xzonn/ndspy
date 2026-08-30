@@ -21,6 +21,7 @@ setuptools.setup(
         'console_scripts': [
             'ndspy_codeCompression = ndspy.codeCompression:main',
             'ndspy_lz10 = ndspy.lz10:main',
+            'ndspy_lz11 = ndspy.lz11:main',
         ],
     },
     classifiers=[

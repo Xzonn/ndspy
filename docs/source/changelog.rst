@@ -26,6 +26,13 @@ can be downloaded from the `Releases page on GitHub
 .. contents:: :local:
 
 
+Unreleased
+----------
+
+*   Added :py:mod:`ndspy.lz11` compression, decompression, and command-line
+    support.
+
+
 4.2.0 (Sept. 13, 2024)
 ----------------------
 

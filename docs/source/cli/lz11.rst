@@ -1,5 +1,5 @@
 ..
-    Copyright 2020 RoadrunnerWMC
+    Copyright 2026 Xzonn
 
     This file is part of ndspy.
 
@@ -16,16 +16,12 @@
     You should have received a copy of the GNU General Public License
     along with ndspy.  If not, see <https://www.gnu.org/licenses/>.
 
-CLI Reference
-=============
+``ndspy.lz11``: LZ11 Compression
+================================
 
-This section contains the documentation for ndspy's command-line interfaces.
+The ``ndspy.lz11`` command-line interface compresses and decompresses files in
+the LZ11 format.
 
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Subpages
-
-    codeCompression
-    lz10
-    lz11
+Run it using ``python3 -m ndspy.lz11`` or ``ndspy_lz11``. It accepts
+``compress`` (``c``) and ``decompress`` (``d``) commands, followed by an input
+file and an optional output file.
