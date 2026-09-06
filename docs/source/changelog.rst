@@ -31,6 +31,8 @@ Unreleased
 
 *   Added :py:mod:`ndspy.lz11` compression, decompression, and command-line
     support.
+*   Added :py:mod:`ndspy.nftr` support for loading, editing, rendering, and
+    saving NFTR bitmap fonts.
 
 
 4.2.0 (Sept. 13, 2024)

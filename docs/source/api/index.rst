@@ -34,6 +34,7 @@ This section contains the documentation for ndspy's Python API.
     lz10
     lz11
     narc
+    nftr
     rom
     soundArchive
     soundBank
