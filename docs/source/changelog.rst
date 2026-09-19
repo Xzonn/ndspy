@@ -26,13 +26,15 @@ can be downloaded from the `Releases page on GitHub
 .. contents:: :local:
 
 
-Unreleased
-----------
+4.3.0 (Sept. 19, 2026)
+-----------------------
 
 *   Added :py:mod:`ndspy.lz11` compression, decompression, and command-line
     support.
 *   Added :py:mod:`ndspy.nftr` support for loading, editing, rendering, and
     saving NFTR bitmap fonts.
+*   Changed BMG Shift-JIS handling to use the more complete CP932 codec.
+*   Improved compression matching and fixed overlapping matches.
 
 
 4.2.0 (Sept. 13, 2024)

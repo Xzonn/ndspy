@@ -4,19 +4,27 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='ndspy',
+    name='ndspy-xzonn',
     version='4.3.0',
-    author='RoadrunnerWMC, Xzonn',
-    author_email='roadrunnerwmc@gmail.com, Xzonn@outlook.com',
-    description='Python library that can help you read, modify and create many types of files used in Nintendo DS games.',
+    author='RoadrunnerWMC',
+    maintainer='Xzonn',
+    maintainer_email='Xzonn@outlook.com',
+    description='Independently maintained ndspy fork with additional Nintendo DS format support.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/Xzonn/ndspy',
+    project_urls={
+        'Issues': 'https://github.com/Xzonn/ndspy/issues',
+        'Source': 'https://github.com/Xzonn/ndspy',
+        'Upstream': 'https://github.com/RoadrunnerWMC/ndspy',
+    },
+    license='GPL-3.0-or-later',
+    license_files=['LICENSE'],
     packages=setuptools.find_packages(),
     package_data={
         'ndspy': ['py.typed'],
     },
-    python_requires='>=3.8',
+    python_requires='>=3.12',
     entry_points={
         'console_scripts': [
             'ndspy_codeCompression = ndspy.codeCompression:main',
@@ -25,14 +33,9 @@ setuptools.setup(
         ],
     },
     classifiers=[
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: 3.13',
         'Programming Language :: Python :: 3.14',
-        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Operating System :: OS Independent',
     ],
     extras_require={

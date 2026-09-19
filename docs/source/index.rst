@@ -16,24 +16,29 @@
     You should have received a copy of the GNU General Public License
     along with ndspy.  If not, see <https://www.gnu.org/licenses/>.
 
-ndspy
-=====
-
-.. image:: https://img.shields.io/discord/534221996230180884.svg?logo=discord&logoColor=white&colorB=7289da
-    :alt: Discord
-    :target: https://discord.gg/RQhxAxw
+ndspy-xzonn
+===========
 
 .. image:: https://img.shields.io/badge/repo-GitHub-brightgreen.svg?logo=github&logoColor=white
     :alt: GitHub
-    :target: https://github.com/RoadrunnerWMC/ndspy
+    :target: https://github.com/Xzonn/ndspy
 
-.. image:: https://img.shields.io/pypi/v/ndspy.svg?logo=python&logoColor=white
+.. image:: https://img.shields.io/pypi/v/ndspy-xzonn.svg?logo=python&logoColor=white
     :alt: PyPI
-    :target: https://pypi.org/project/ndspy/
+    :target: https://pypi.org/project/ndspy-xzonn/
 
-.. image:: https://img.shields.io/github/license/RoadrunnerWMC/ndspy.svg?logo=gnu&logoColor=white
+.. image:: https://img.shields.io/github/license/Xzonn/ndspy.svg?logo=gnu&logoColor=white
     :alt: License: GNU GPL 3.0
     :target: https://www.gnu.org/licenses/gpl-3.0
+
+This is Xzonn's personal fork of
+`RoadrunnerWMC/ndspy <https://github.com/RoadrunnerWMC/ndspy>`_. It is published
+to PyPI primarily for use in Xzonn's own projects and for users who need
+features that are not implemented in the upstream branch. It is independently
+maintained and is not an official upstream release.
+
+The PyPI distribution is named ``ndspy-xzonn``, while the Python import package
+remains ``ndspy`` for compatibility with existing code.
 
 **ndspy** ("en-dee-ESS-pie") is a Python library and suite of command-line
 tools that can help you read, modify and create many types of files used in
@@ -203,54 +208,36 @@ This section will try to answer some questions you may have.
 Installation
 ------------
 
-ndspy requires Python 3.6 or newer to run. CPython (the reference
+ndspy-xzonn requires Python 3.12 or newer to run. CPython (the reference
 implementation of Python) and PyPy are both supported. Python 2, though, is not
 supported at all.
 
-The easiest way to get the latest stable release of ndspy is through PyPI using
-pip.
-
-pip is a command-line application, so you'll need to use the Windows command
-prompt or bash to do this. The exact command you need to enter depends on your
-operating system and the settings you chose when you installed Python. One of
-the following possibilities will probably work for you, though:
+Install this fork from PyPI using pip:
 
 .. code-block:: text
 
-    pip install ndspy
+    python -m pip install ndspy-xzonn
 
-    python3 -m pip install ndspy
-
-    py -3 -m pip install ndspy
-
-If you want the very latest version of ndspy including features and bugfixes
-not yet in any official release, you can also download the code from the
-`GitHub repository <https://github.com/RoadrunnerWMC/ndspy>`_ and install it
-manually.
+The upstream ``ndspy`` distribution and ``ndspy-xzonn`` install the same
+``ndspy`` import package and must not be installed in the same environment.
+The latest development version is available from this
+`GitHub repository <https://github.com/Xzonn/ndspy>`_.
 
 
 Support
 -------
 
-I spent a long time writing the documentation for ndspy, so first please
-double-check that your question isn't already answered in the :doc:`api/index`
-or :doc:`tutorials/index`.
-
-If that doesn't help, you can ask me (RoadrunnerWMC) your questions via `the
-ndspy Discord server <https://discord.gg/RQhxAxw>`_. I'll try to get back to
-you as quickly as I can!
-
-If you think you've found a bug in ndspy, please `file an issue on GitHub
-<https://github.com/RoadrunnerWMC/ndspy/issues/new>`_. Thanks!
+For questions and bugs specific to this fork, please `open an issue in this
+repository <https://github.com/Xzonn/ndspy/issues/new>`_. Questions about
+upstream behavior should use the upstream project's support channels.
 
 
 Versioning
 ----------
 
-ndspy follows `semantic versioning <https://semver.org/>`_ to the best of my
-ability. If a tool claims to work with ndspy 1.0.2, it should also work with
-ndspy 1.2.0, but not necessarily 2.0.0. (Please note that not all of those
-version numbers actually exist!)
+This fork follows `semantic versioning <https://semver.org/>`_ independently of
+the upstream PyPI distribution. Release notes identify the upstream version or
+commit on which each fork release is based.
 
 Undocumented modules are considered exempt from semantic versioning, and are
 subject to drastic changes at any time. This is also mentioned in the
@@ -274,8 +261,10 @@ subject to drastic changes at any time. This is also mentioned in the
 Credits
 -------
 
-**ndspy** was written by `RoadrunnerWMC <https://github.com/RoadrunnerWMC/>`_,
-using information from many, many sources. In alphabetical order:
+**ndspy** was written by `RoadrunnerWMC <https://github.com/RoadrunnerWMC/>`_.
+This fork is maintained by `Xzonn <https://github.com/Xzonn/>`_ and preserves
+the original project's credits and license. The project uses information from
+many sources. In alphabetical order:
 
 *   `Source code for apicula <https://github.com/scurest/apicula>`_ -- a very
     nice reference for information about *NSBMD*
